@@ -1,5 +1,5 @@
 {
-  "name": "@iostls/react-native-tcp-socket",
+  "name": "react-native-tcp-socket",
   "title": "React Native Tcp Socket",
   "version": "6.3.0-iostls.0",
   "description": "React Native TCP socket API for Android & iOS with SSL/TLS support.TLS-fixed fork of react-native-tcp-socket with iOS mutual auth support",
