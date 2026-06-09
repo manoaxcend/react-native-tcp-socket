@@ -572,13 +572,14 @@ NSString *const RCTTCPErrorDomain = @"RCTTCPErrorDomain";
         return;
     }
 
-    // Show up if SSL handsake is done
+    // Show up if SSL handshake is done
     if (!_tls) {
         if (_tlsOptionsPending) {
             [self startTLS:_tlsOptionsPending];
             _tlsOptionsPending = nil;
         } else {
             [_clientDelegate onConnect:self];
+            _connecting = false;
         }
     }
     [sock readDataWithTimeout:-1 tag:_id.longValue];
